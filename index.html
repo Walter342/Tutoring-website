@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesetja Mathipa Tutoring</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <!-- Logo with responsive sizing and fallback -->
+    <img src="./resources/logo.png" alt="Tutoring Logo" class="logo" id="logo-img"
+         onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
+    <h1 id="logo-fallback" style="display:none; color:white; font-size:2rem;">Lesetja Mathipa Tutoring</h1>
+    <p>1-on-1 & Group Sessions via Microsoft Teams</p>
+</header>
+
+<main>
+    <!-- Auth Section -->
+    <section id="auth-section">
+        <div id="signup-form" class="auth-card">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-name" placeholder="Your Name" required>
+            <input type="email" id="signup-email" placeholder="Your Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button id="signup-btn">Sign Up</button>
+            <p>Already have an account? <span id="show-login">Login</span></p>
+        </div>
+
+        <div id="login-form" class="auth-card" style="display:none;">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Your Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button id="login-btn">Login</button>
+            <p>Don't have an account? <span id="show-signup">Sign Up</span></p>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="dashboard" style="display:none;">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+
+        <h3>🎥 Tutorials</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/I0WJKYhyqmA" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/pWuFIbJrMyM" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/I21LGsDc_0w" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/uqXq-jzbTOs" allowfullscreen></iframe>
+        </div>
+
+        <h3>📂 Resources</h3>
+        <div class="resources">
+            <a href="resources/resource1.pdf" download>Resource 1</a>
+            <a href="resources/resource2.pdf" download>Resource 2</a>
+        </div>
+
+        <h3>📢 Stay Updated</h3>
+        <div class="newsletter">
+            <input type="email" id="newsletter-email" placeholder="Your email for updates">
+            <button id="newsletter-btn">Subscribe</button>
+        </div>
+
+        <h3>💬 Contact</h3>
+        <a href="https://wa.me/2761417827" target="_blank" class="whatsapp-btn">Chat with us on WhatsApp</a>
+
+        <button id="logout-btn" class="logout-btn">Logout</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Lesetja Mathipa Tutoring. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
