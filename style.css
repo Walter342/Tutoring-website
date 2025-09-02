@@ -1,58 +1,185 @@
-/* Reset */
-* { box-sizing:border-box; margin:0; padding:0; }
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
 
-/* Body & Header */
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f0f2f5; color:#333; }
-header { background:#1f3b4d; color:white; text-align:center; padding:30px 15px; }
-header .logo { width:100px; margin-bottom:10px; border-radius:10px; }
+/* Header */
+header {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-/* Auth Section */
-#auth-section { display:flex; flex-direction:column; align-items:center; margin:40px 15px; }
-.auth-card { background:white; padding:30px 25px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); width:100%; max-width:400px; text-align:center; transition:0.3s; }
-.auth-card h2 { margin-bottom:20px; color:#1f3b4d; }
-.auth-card input, .booking-section input, .booking-section select { width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px; transition:0.3s; }
-.auth-card input:focus, .booking-section input:focus, .booking-section select:focus { border-color:#1f3b4d; outline:none; }
-.auth-card button, .booking-section button { width:100%; padding:12px; margin-top:15px; border:none; border-radius:8px; background:#1f3b4d; color:white; font-size:16px; cursor:pointer; transition:0.3s; }
-.auth-card button:hover, .booking-section button:hover { background:#163147; }
-.auth-card p { margin-top:15px; }
-.auth-card span { color:#1f3b4d; cursor:pointer; text-decoration:underline; }
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Auth Forms */
+.auth-card {
+  background: white;
+  max-width: 350px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-card input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.auth-card button {
+  width: 95%;
+  padding: 10px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background: #005fa3;
+}
+
+.auth-card span {
+  color: #0077cc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-card span:hover {
+  text-decoration: underline;
+}
 
 /* Dashboard */
-.dashboard { padding:20px 15px; max-width:1000px; margin:0 auto; text-align:center; }
-.dashboard h2 { margin-bottom:20px; color:#1f3b4d; }
+.dashboard {
+  padding: 20px;
+  text-align: center;
+}
 
-/* Tabs */
-.tabs { display: flex; justify-content: center; margin-bottom: 20px; gap: 10px; flex-wrap: wrap; }
-.tab-btn { background: #1f3b4d; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
-.tab-btn:hover { background: #163147; }
-.tab-btn.active { background: #27ae60; }
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
 
-/* Tab Content */
-.tab-content { padding: 10px 0; }
+.video-container iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
 
-/* Video Grid */
-.video-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px; }
-.video-card { width: 220px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s; text-align: center; background: white; cursor: pointer; }
-.video-card img { width: 100%; height: 140px; object-fit: cover; }
-.video-card p { padding: 8px; font-weight: bold; color: #1f3b4d; }
-.video-card:hover { transform: scale(1.05); }
+.resources a {
+  display: block;
+  margin: 8px 0;
+  padding: 10px;
+  background: #eee;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
 
-/* Resources */
-.resources { display:flex; flex-direction:column; align-items:center; margin-bottom:20px; }
-.resources a { display:block; margin:8px 0; color:#1f3b4d; font-weight:bold; text-decoration:none; transition:0.3s; }
-.resources a:hover { text-decoration:underline; color:#163147; }
+.resources a:hover {
+  background: #ddd;
+}
 
-/* WhatsApp & Logout */
-.whatsapp-btn { display:inline-block; margin:10px 0 20px 0; padding:12px 20px; background:#25D366; color:white; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; }
-.whatsapp-btn:hover { background:#1ebe57; }
-.logout-btn { background:#e74c3c; color:white; padding:12px 20px; border:none; border-radius:8px; cursor:pointer; transition:0.3s; }
-.logout-btn:hover { background:#c0392b; }
+/* Booking Form */
+.booking-form {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.booking-form input, .booking-form button {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.booking-form button {
+  background: #25d366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background: #1ebc57;
+}
+
+/* Newsletter */
+.newsletter input, .newsletter button {
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+
+.newsletter button {
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.newsletter button:hover {
+  background: #005fa3;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebc57;
+}
+
+/* Logout */
+.logout-btn {
+  margin-top: 20px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #cc0000;
+}
 
 /* Footer */
-footer { text-align:center; padding:20px; background:#1f3b4d; color:white; margin-top:40px; }
-
-/* Responsive */
-@media(max-width:768px){
-    .video-card { width:90%; height:auto; }
-    .auth-card { width:90%; }
+footer {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
 }

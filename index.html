@@ -1,114 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Walter Mathipa Tutoring</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walter Mathipa Tutoring</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <!-- Logo with fallback -->
-    <img src="./resources/logo.png" alt="Tutoring Logo" class="logo" id="logo-img"
-         onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
-    <h1 id="logo-fallback" style="display:none; color:white; font-size:2rem;">Walter Mathipa Tutoring</h1>
-    <p>1-on-1 & Group Sessions via Microsoft Teams</p>
+  <!-- Logo with responsive sizing and fallback -->
+  <img src="./resources/logo.png" alt="Tutoring Logo" class="logo" id="logo-img"
+       onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
+  <h1 id="logo-fallback" style="display:none; color:white; font-size:2rem;">Walter Mathipa Tutoring</h1>
+  <p>1-on-1 & Group Sessions via Microsoft Teams</p>
 </header>
 
 <main>
-    <!-- Auth Section -->
-    <section id="auth-section">
-        <div id="signup-form" class="auth-card">
-            <h2>Sign Up</h2>
-            <input type="text" id="signup-name" placeholder="Your Name" required>
-            <input type="email" id="signup-email" placeholder="Your Email" required>
-            <input type="password" id="signup-password" placeholder="Password" required>
-            <button id="signup-btn">Sign Up</button>
-            <p>Already have an account? <span id="show-login">Login</span></p>
-        </div>
+  <!-- Auth Section -->
+  <section id="auth-section">
+    <div id="signup-form" class="auth-card">
+      <h2>Sign Up</h2>
+      <input type="text" id="signup-name" placeholder="Your Name" required>
+      <input type="email" id="signup-email" placeholder="Your Email" required>
+      <input type="password" id="signup-password" placeholder="Password" required>
+      <button id="signup-btn">Sign Up</button>
+      <p>Already have an account? <span id="show-login">Login</span></p>
+    </div>
 
-        <div id="login-form" class="auth-card" style="display:none;">
-            <h2>Login</h2>
-            <input type="email" id="login-email" placeholder="Your Email" required>
-            <input type="password" id="login-password" placeholder="Password" required>
-            <button id="login-btn">Login</button>
-            <p>Don't have an account? <span id="show-signup">Sign Up</span></p>
-        </div>
-    </section>
+    <div id="login-form" class="auth-card" style="display:none;">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Your Email" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button id="login-btn">Login</button>
+      <p><span id="forgot-password">Forgot Password?</span></p>
+      <p>Don't have an account? <span id="show-signup">Sign Up</span></p>
+    </div>
 
-    <!-- Dashboard -->
-    <section id="dashboard" class="dashboard" style="display:none;">
-        <h2>Welcome, <span id="user-name"></span>!</h2>
+    <div id="reset-form" class="auth-card" style="display:none;">
+      <h2>Reset Password</h2>
+      <input type="email" id="reset-email" placeholder="Your Email" required>
+      <input type="password" id="new-password" placeholder="New Password" required>
+      <button id="reset-btn">Reset Password</button>
+      <p>Back to <span id="back-to-login">Login</span></p>
+    </div>
+  </section>
 
-        <!-- Dashboard Tabs -->
-        <div class="tabs">
-            <button class="tab-btn active" data-tab="videos-tab">🎥 Tutorials</button>
-            <button class="tab-btn" data-tab="resources-tab">📂 Resources</button>
-            <button class="tab-btn" data-tab="booking-tab">📝 Book Session</button>
-        </div>
+  <!-- Dashboard -->
+  <section id="dashboard" class="dashboard" style="display:none;">
+    <h2>Welcome, <span id="user-name"></span>!</h2>
 
-        <!-- Tab Contents -->
-        <div class="tab-content" id="videos-tab">
-            <div class="video-grid">
-                <a href="https://www.youtube.com/watch?v=I0WJKYhyqmA" target="_blank">
-                    <div class="video-card">
-                        <img src="https://img.youtube.com/vi/I0WJKYhyqmA/0.jpg" alt="Video 1">
-                        <p>Video 1</p>
-                    </div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=pWuFIbJrMyM" target="_blank">
-                    <div class="video-card">
-                        <img src="https://img.youtube.com/vi/pWuFIbJrMyM/0.jpg" alt="Video 2">
-                        <p>Video 2</p>
-                    </div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=I21LGsDc_0w" target="_blank">
-                    <div class="video-card">
-                        <img src="https://img.youtube.com/vi/I21LGsDc_0w/0.jpg" alt="Video 3">
-                        <p>Video 3</p>
-                    </div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=uqXq-jzbTOs" target="_blank">
-                    <div class="video-card">
-                        <img src="https://img.youtube.com/vi/uqXq-jzbTOs/0.jpg" alt="Video 4">
-                        <p>Video 4</p>
-                    </div>
-                </a>
-            </div>
-        </div>
+    <h3>🎥 Tutorials</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/I0WJKYhyqmA" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/pWuFIbJrMyM" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/I21LGsDc_0w" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/uqXq-jzbTOs" allowfullscreen></iframe>
+    </div>
 
-        <div class="tab-content" id="resources-tab" style="display:none;">
-            <div class="resources">
-                <a href="resources/resource1.pdf" download>Resource 1</a>
-                <a href="resources/resource2.pdf" download>Resource 2</a>
-            </div>
-        </div>
+    <h3>📂 Resources</h3>
+    <div class="resources">
+      <a href="resources/resource1.pdf" download>Resource 1</a>
+      <a href="resources/resource2.pdf" download>Resource 2</a>
+    </div>
 
-        <div class="tab-content" id="booking-tab" style="display:none;">
-            <div class="booking-section">
-                <form id="bookingForm">
-                    <input type="text" id="studentName" placeholder="Your Name" required>
-                    <input type="email" id="studentEmail" placeholder="Your Email" required>
-                    <select id="sessionType" required>
-                        <option value="">Select Session</option>
-                        <option value="Tutorial">Tutorial</option>
-                        <option value="Exam Preparation">Exam Preparation</option>
-                    </select>
-                    <input type="date" id="sessionDate" required>
-                    <button type="submit">Book Now</button>
-                </form>
-            </div>
-        </div>
+    <h3>📅 Book a Session</h3>
+    <form id="booking-form" class="booking-form">
+      <input type="text" id="booking-name" placeholder="Your Name" required>
+      <input type="email" id="booking-email" placeholder="Your Email" required>
+      <input type="date" id="booking-date" required>
+      <button type="submit">Book via WhatsApp</button>
+    </form>
 
-        <!-- WhatsApp & Logout -->
-        <a href="https://wa.me/27761417827" class="whatsapp-btn" target="_blank">💬 Chat with us on WhatsApp</a>
-        <button id="logout-btn" class="logout-btn">Logout</button>
-    </section>
+    <h3>📢 Stay Updated</h3>
+    <div class="newsletter">
+      <input type="email" id="newsletter-email" placeholder="Your email for updates">
+      <button id="newsletter-btn">Subscribe</button>
+    </div>
+
+    <h3>💬 Contact</h3>
+    <a href="https://wa.me/27761417827" target="_blank" class="whatsapp-btn">Chat with us on WhatsApp</a>
+
+    <button id="logout-btn" class="logout-btn">Logout</button>
+  </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Walter Mathipa Tutoring. All rights reserved.</p>
+  <p>&copy; 2025 Walter Mathipa Tutoring. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
