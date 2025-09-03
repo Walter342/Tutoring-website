@@ -9,7 +9,6 @@
 <body>
 
 <header>
-  <!-- Logo with responsive sizing and fallback -->
   <img src="./resources/logo.png" alt="Tutoring Logo" class="logo" id="logo-img"
        onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';">
   <h1 id="logo-fallback" style="display:none; color:white; font-size:2rem;">Walter Mathipa Tutoring</h1>
@@ -68,6 +67,19 @@
     <form id="booking-form" class="booking-form">
       <input type="text" id="booking-name" placeholder="Your Name" required>
       <input type="email" id="booking-email" placeholder="Your Email" required>
+      
+      <select id="booking-module" required>
+    <option value="">Select Module</option>
+    <option value="STA1501">STA1501 - Mathematics for IT</option>
+    <option value="STA1510">STA1510 - Statistics 1</option>
+    <option value="STA1502">STA1502 - Probability & Applications</option>
+    <option value="STA1504">STA1504 - Data Analysis</option>
+    <option value="RSC2601">RSC2601 - Research Methods</option>
+    <option value="STA2610">STA2610 - Statistical Computing</option>
+    <option value="STA2604">STA2604 - Regression Analysis</option>
+    <option value="RISK MANAGEMENT">RISK MANAGEMENT (FURM01-8)</option>
+</select>
+      
       <input type="date" id="booking-date" required>
       <button type="submit">Book via WhatsApp</button>
     </form>

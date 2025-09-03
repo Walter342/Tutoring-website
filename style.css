@@ -1,61 +1,95 @@
-/* General Reset */
-body {
+/* ===== GENERAL RESET ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
   color: #333;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 header {
-  background: #0077cc;
+  background: #1f3b4d;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 30px 15px;
 }
 
-.logo {
-  width: 100px;
+header .logo {
+  width: 120px;
   height: auto;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
-/* Auth Forms */
+/* ===== AUTH FORMS ===== */
 .auth-card {
   background: white;
-  max-width: 350px;
+  max-width: 380px;
   margin: 30px auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: center;
+  transition: 0.3s;
 }
 
-.auth-card input {
+.auth-card h2 {
+  margin-bottom: 20px;
+  color: #1f3b4d;
+}
+
+.auth-card input,
+.auth-card select,
+.booking-form input,
+.booking-form select {
   display: block;
   width: 90%;
   margin: 10px auto;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.auth-card input:focus,
+.auth-card select:focus,
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #1f3b4d;
+  outline: none;
+}
+
+.auth-card button,
+.booking-form button,
+.newsletter button,
+.logout-btn {
+  width: 95%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .auth-card button {
-  width: 95%;
-  padding: 10px;
-  background: #0077cc;
+  background: #1f3b4d;
   color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 .auth-card button:hover {
-  background: #005fa3;
+  background: #163147;
 }
 
 .auth-card span {
-  color: #0077cc;
+  color: #1f3b4d;
   cursor: pointer;
   font-weight: bold;
 }
@@ -64,12 +98,20 @@ header {
   text-decoration: underline;
 }
 
-/* Dashboard */
+/* ===== DASHBOARD ===== */
 .dashboard {
-  padding: 20px;
+  padding: 20px 15px;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
 
+.dashboard h2 {
+  margin-bottom: 20px;
+  color: #1f3b4d;
+}
+
+/* ===== VIDEO CONTAINER ===== */
 .video-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -80,16 +122,25 @@ header {
 .video-container iframe {
   width: 100%;
   height: 200px;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
+.video-container iframe:hover {
+  transform: scale(1.05);
+}
+
+/* ===== RESOURCES ===== */
 .resources a {
   display: block;
   margin: 8px 0;
   padding: 10px;
   background: #eee;
+  color: #1f3b4d;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: bold;
   transition: background 0.2s;
 }
 
@@ -97,89 +148,108 @@ header {
   background: #ddd;
 }
 
-/* Booking Form */
+/* ===== BOOKING FORM ===== */
 .booking-form {
   margin: 20px auto;
   max-width: 400px;
   padding: 15px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
 }
 
-.booking-form input, .booking-form button {
-  width: 90%;
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+.booking-form select {
+  background: #f9f9f9;
+  cursor: pointer;
 }
 
 .booking-form button {
   background: #25d366;
   color: white;
-  border: none;
-  cursor: pointer;
 }
 
 .booking-form button:hover {
   background: #1ebc57;
 }
 
-/* Newsletter */
-.newsletter input, .newsletter button {
+/* ===== NEWSLETTER ===== */
+.newsletter {
+  margin: 20px 0;
+}
+
+.newsletter input {
+  width: 65%;
+  max-width: 250px;
   padding: 10px;
   border-radius: 8px;
-  margin: 5px;
   border: 1px solid #ccc;
 }
 
 .newsletter button {
-  background: #0077cc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #1f3b4d;
   color: white;
   cursor: pointer;
   border: none;
+  margin-left: 5px;
 }
 
 .newsletter button:hover {
-  background: #005fa3;
+  background: #163147;
 }
 
-/* WhatsApp Button */
+/* ===== WHATSAPP BUTTON ===== */
 .whatsapp-btn {
   display: inline-block;
+  margin: 10px 0 20px 0;
+  padding: 12px 20px;
   background: #25d366;
   color: white;
-  padding: 12px 18px;
   border-radius: 8px;
   text-decoration: none;
-  margin-top: 15px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .whatsapp-btn:hover {
   background: #1ebc57;
 }
 
-/* Logout */
+/* ===== LOGOUT ===== */
 .logout-btn {
-  margin-top: 20px;
-  background: #ff4d4d;
+  background: #e74c3c;
   color: white;
-  border: none;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .logout-btn:hover {
-  background: #cc0000;
+  background: #c0392b;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
-  background: #0077cc;
-  color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: 30px;
+  padding: 20px;
+  background: #1f3b4d;
+  color: white;
+  margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px) {
+  .video-container iframe {
+    width: 100%;
+    height: 200px;
+  }
+  .auth-card, .booking-form {
+    width: 90%;
+  }
+  .newsletter input, .newsletter button {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
